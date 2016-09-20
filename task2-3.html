@@ -14,8 +14,8 @@
 	<div class="contant">
 		<div class="left">玩家配比</div>
 		<div class="right">
-			<div class="player"></div>
-			<p>点击设置</p>
+			<div id="player"></div>
+			<button onclick="printf()">点击设置</button>
 		</div>
 	</div>
 	<div class="word">
@@ -23,7 +23,7 @@
 		<input type="text" placeholder="幽灵词组">
 	</div>
 	<div class="foot">
-		<p>玩家人数<input type="text" name="">人</p>
+		<p>玩家人数<input type="text" id="people" value="12" onfocus="clear()" onblur="setting()" name="">人</p>
 		<div class="move">
 			<button>-</button>
 			<img src="task2/move.png">
@@ -34,5 +34,6 @@
 	<div class="push">
 		<button class="push_card">去发牌</button>
 	</div>
+	<script type="text/javascript" src="task2-3.js"></script>
 </body>
 </html>

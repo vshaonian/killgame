@@ -42,7 +42,7 @@ function clear() {//清空输出内容
 	clears=document.getElementById("player");
 	clears.innerHTML="";
 }
-function add() {
+function add() {//增加人数
 	if (peopleNum<18) {
 	peopleNum=peopleNum+1;
 	document.getElementById("people").value=peopleNum
@@ -52,7 +52,7 @@ function add() {
 		alert("不觉得人太多了吗");
 	}
 }
-function reduction() {
+function reduction() {//减少人数
 	if (peopleNum>6) {
 	peopleNum=peopleNum-1;
 	document.getElementById("people").value=peopleNum

@@ -50,11 +50,30 @@ body{
 	width: 100%;
 	height: 39rem;
 	border-bottom: 1px solid #d9d9d9;
+	overflow: scroll;
 }
 #player span{
 	width: 50%;
+	margin-top: 4.5rem;
+	color: #a1a1a1;
 	float: left;
-	font-size: 3rem;
+	font-size: 2.6rem;	
+}
+.kkk{
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	margin-right: 2rem;
+	background-color: #ee9f1b;
+	vertical-align: 15%;
+}
+.www{
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	margin-right: 2rem;
+	background-color: #29bde0;
+	vertical-align: 15%;
 }
 .right button{
 	width: 100%;
@@ -100,24 +119,27 @@ body{
 }
 .move{
 	margin-top: 6.2rem;
+	position: relative;
 }
 .move_back{
 	display: inline-block;
 	height: 0.4rem;
-	width: 40.8rem;
+	width: 80%;
 	background-color: #fab344;
 }
 .foot button{
-	width: 2.6rem;
-	height: 2.6rem;
+	width: 7%;
+	height: 5rem;
 	border:1px solid #d9d9d9;
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 3rem;
 	color: #fab344;
 	background-color: #fff;
 }
 .move img{
 	position: absolute;
+	bottom: 0.6rem;
+	right: 47%;
 }
 .push{
 	box-sizing: border-box;

@@ -15,7 +15,7 @@
 		<div class="left">玩家配比</div>
 		<div class="right">
 			<div id="player"></div>
-			<button onclick="printf()">点击设置</button>
+			<button>点击设置</button>
 		</div>
 	</div>
 	<div class="word">
@@ -23,12 +23,12 @@
 		<input type="text" placeholder="幽灵词组">
 	</div>
 	<div class="foot">
-		<p>玩家人数<input type="text" id="people" value="12" onfocus="clear()" onblur="setting()" name="">人</p>
+		<p>玩家人数<input type="text" id="people" value="12" onblur="setting()" name="">人</p>
 		<div class="move">
-			<button>-</button>
-			<img src="task2/move.png">
+			<button onclick="reduction();move()">-</button>
+			<img id="movemove" src="task2/move.png">
 			<div class="move_back"></div>
-			<button>+</button>
+			<button onclick="add();move()">+</button>
 		</div>
 	</div>
 	<div class="push">

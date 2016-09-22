@@ -19,7 +19,7 @@ function changeColor(){
         colorName="蓝色";
         break;
     }
-    lattice[lastone].style.backgroundColor="#e8830d";
+    lattice[lastone].style.backgroundColor="orange";
     lastone=latticeNum;
     lattice[latticeNum].style.backgroundColor=color
     console.log("格子"+(latticeNum+1)+"变成了"+colorName)

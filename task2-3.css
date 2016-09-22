@@ -139,7 +139,6 @@ body{
 .move img{
 	position: absolute;
 	bottom: 0.6rem;
-	right: 47%;
 }
 .push{
 	box-sizing: border-box;

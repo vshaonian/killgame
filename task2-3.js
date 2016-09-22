@@ -7,6 +7,7 @@ function setting() {
     else {
         allPlayer();
         printf();
+        move();
     }
 }
 var killerNum
@@ -49,7 +50,7 @@ function add() {//增加人数
 	setting()
 	}
 	else{
-		alert("不觉得人太多了吗");
+		alert("本游戏最多18人参与哦");
 	}
 }
 function reduction() {//减少人数
@@ -59,15 +60,20 @@ function reduction() {//减少人数
 	setting()
 	}
 	else {
-		alert("六个人都凑不齐，玩儿蛋去吧");
+		alert("本游戏最少需要六个人哦");
 	}
 }
-var x;
-function move() {
-	var moveblock=document.getElementById("movemove");
-	x = moveblock.getBoundingClientRect().left;
-
-	movemove.style.left=x+50;
-	console.log(x);
+function move() {//改变滑块位置
+	console.log(peopleNum);
+	x=(peopleNum-5)*3.3+"rem";
+	//console.log(y)
+	//console.log(x);
+	var width=document.getElementById("movemove").offsetwidth;
+	console.log(width);
+	document.getElementById("movemove").style.left=x;
+	
+}
+function nonono() {
+	alert("程序猿没钱吃饭了，后面的暂时搁置。如果想尽快看到后面的内容，可以给我发红包哦")
 }
 window.onload=setting;//启动加载

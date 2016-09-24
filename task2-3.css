@@ -119,13 +119,25 @@ body{
 }
 .move{
 	margin-top: 6.2rem;
-	position: relative;
 }
-.move_back{
-	display: inline-block;
+input[type=range]{
+	-webkit-appearance: none;
+	width: 70%;
+	background: transparent;
+}
+input[type=range]::-webkit-slider-runnable-track {
 	height: 0.4rem;
-	width: 80%;
-	background-color: #fab344;
+	background-color: #fcc671;
+}
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 60px;
+	height: 36px;
+	margin-top: -1rem;
+	background: url("task2/move.png") no-repeat;
+}
+input[type=range]:focus{
+	outline: none;
 }
 .foot button{
 	width: 7%;
@@ -136,10 +148,7 @@ body{
 	color: #fab344;
 	background-color: #fff;
 }
-.move img{
-	position: absolute;
-	bottom: 0.6rem;
-}
+
 .push{
 	box-sizing: border-box;
 	margin: 0 2rem 2.5rem 2rem;

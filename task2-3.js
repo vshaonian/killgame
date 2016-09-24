@@ -65,13 +65,7 @@ function reduction() {//减少人数
 }
 function move() {//改变滑块位置
 	console.log(peopleNum);
-	x=(peopleNum-5)*3.3+"rem";
-	//console.log(y)
-	//console.log(x);
-	var width=document.getElementById("movemove").offsetwidth;
-	console.log(width);
-	document.getElementById("movemove").style.left=x;
-	
+	document.getElementById("moveback").value=peopleNum;
 }
 function nonono() {
 	alert("程序猿没钱吃饭了，后面的暂时搁置。如果想尽快看到后面的内容，可以给我发红包哦")

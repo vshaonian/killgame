@@ -27,7 +27,6 @@ function printf() {
 	clear()//每次循环前清空上次输出内容
 	var killerArr=new Array(killerNum)
 	for (var i = 0; i < killerArr.length; i++) {//输出杀手人数
-		console.log(killerArr.length)
 		
 		span=document.createElement("span")
 		span.innerHTML='<div class="kkk"></div>杀手1人';
@@ -64,8 +63,12 @@ function reduction() {//减少人数
 	}
 }
 function move() {//改变滑块位置
-	console.log(peopleNum);
 	document.getElementById("moveback").value=peopleNum;
+}
+function reset() {//根据滑块位置动态改变输入框人数
+	var moveNum=document.getElementById("moveback").value;
+	console.log(moveNum)
+	document.getElementById("people").value=moveNum;
 }
 function nonono() {
 	alert("程序猿没钱吃饭了，后面的暂时搁置。如果想尽快看到后面的内容，可以给我发红包哦")

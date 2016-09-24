@@ -26,12 +26,12 @@
 		<p>玩家人数<input type="text" id="people" value="6" onblur="setting()" name="">人</p>
 		<div class="move">
 			<button onclick="reduction();move()">-</button>
-			<input type="range" id="moveback" name="" min="6" max="18" value="6" onclick="reset();setting()">
+			<input type="range" id="moveback" name="" min="6" max="18" value="6" onchange="reset();setting()">
 			<button onclick="add();move()">+</button>
 		</div>
 	</div>
 	<div class="push">
-		<button class="push_card" onclick="nonono()">去发牌</button>
+		<a href="task3.html"><button class="push_card">去发牌</button></a>
 	</div>
 	<script type="text/javascript" src="task2-3.js"></script>
 </body>

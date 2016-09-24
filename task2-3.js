@@ -70,7 +70,7 @@ function reset() {//根据滑块位置动态改变输入框人数
 	console.log(moveNum)
 	document.getElementById("people").value=moveNum;
 }
-function nonono() {
-	alert("程序猿没钱吃饭了，后面的暂时搁置。如果想尽快看到后面的内容，可以给我发红包哦")
+function dont() {
+	alert("即将上线，敬请期待，么么哒")
 }
 window.onload=setting;//启动加载

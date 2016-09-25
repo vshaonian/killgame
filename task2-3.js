@@ -48,6 +48,10 @@ function printf() {
 		//数组进行洗牌，并输出一个新数组
 	var newPlayer = shuffle(playerA);
 	console.log(newPlayer);
+	//数组转化成字符串并存储与本地
+	var playerStr = JSON.stringify(newPlayer);
+	localStorage.ids = playerStr;
+	console.log("数组变成字符串存储" + playerStr);
 }
 function clear() {//清空输出内容
 	clears=document.getElementById("player");

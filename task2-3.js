@@ -37,10 +37,44 @@ function printf() {
 		span.innerHTML='<div class="www"></div>水民1人';
 		player.appendChild(span)
 	}
+	//根据输入的数字组成一个数组
+		var playerA = new Array;
+		for ( var i = 0; i < killerNum; i++) {
+			playerA[i] = "杀手";
+		}
+		for ( i = killerNum; i < peopleNum; i++) {
+			playerA[i] = "水民";
+		}
+		//数组进行洗牌，并输出一个新数组
+	var newPlayer = shuffle(playerA);
+	console.log(newPlayer);
 }
 function clear() {//清空输出内容
 	clears=document.getElementById("player");
 	clears.innerHTML="";
+}
+//洗牌算法一
+// function shuffle(array) {
+// 	var myArray = array.concat();
+// 	for (var x = myArray.length; x--; ) {
+// 		var y = Math.floor(Math.random() * (x + 1));
+// 		var temp = myArray[x];
+// 		myArray[x] = myArray[y];
+// 		myArray[y] = temp;
+// 	}
+// 	return myArray;
+// }
+//洗牌算法二
+function shuffle(array) {
+	for (var i = array.length-1; i >=0; i--) {
+
+        var randomIndex = Math.floor(Math.random()*(i+1)); 
+        var itemAtIndex = array[randomIndex]; 
+
+        array[randomIndex] = array[i]; 
+        array[i] = itemAtIndex;
+    }
+    return array;
 }
 function add() {//增加人数
 	if (peopleNum<18) {
@@ -69,7 +103,7 @@ function reset() {//根据滑块位置动态改变输入框人数
 	var moveNum=document.getElementById("moveback").value;
 	console.log(moveNum)
 	document.getElementById("people").value=moveNum;
-}
+} 
 function dont() {
 	alert("即将上线，敬请期待，么么哒")
 }

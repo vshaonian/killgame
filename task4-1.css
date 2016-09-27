@@ -1,0 +1,87 @@
+*{
+	margin:0;
+	padding: 0;
+}
+html{
+	font-size: 62.5%;
+}
+body{
+	
+	background-color: #29bde0;
+}
+.head{
+	height: 8rem;
+	border-bottom: 2px solid #74d4eb;
+	line-height: 8rem;
+	font-size: 3.4rem;
+	text-align: center;
+	color: #fff;
+}
+.head a{
+	float: left;
+	margin-left: 2.5rem;
+	color: #fff;
+	text-decoration: none;
+}
+.head img{
+	float: right;
+	margin:3rem 2.5rem 0 0;
+}
+#wrap{
+	width: 64rem;
+	height: 81rem;
+	margin: 0 auto;
+	font-size: 0px;
+	overflow: auto;
+}
+#wrap li{
+	width: 12.6rem;
+	height: 12.6rem;
+	margin: 5rem;
+	text-align: center;
+	display: inline-block;
+	font-size: 0px;
+	background-color: #fff;
+	background-image: url(task4/icon.png);
+	background-size: 100%;
+}
+.hole{
+	margin: 0 auto;
+	width: 12.6rem;
+	height: 12.6rem;
+	/*font-size: 2.3rem;
+	background-color: #fff;
+	background-image: url(task4/icon.png);
+	background-size: 100%;*/
+}
+#wrap li :hover{
+	background-image: none;
+	background-color: #f5c97b;
+}
+#wrap p{
+	width: 100%;
+	height: 9.8rem;
+	font-size: 2.3rem;
+}
+#wrap span{
+	display: block;
+	background-color: #349cbd;
+	opacity: 0.3;
+	width: 12.6rem;
+	height: 2.8rem;
+	font-size: 2.3rem;
+}
+.foot{
+	height: 19.7rem;
+	position: relative;
+	top: 0px;
+	text-align: center;
+}
+.foot button{
+	height: 8.5rem;
+	width: 49rem;
+	margin: 5.9rem 0;
+	background-color: #fbb435;
+	color: #fff;
+	font-size: 4.8rem;
+}

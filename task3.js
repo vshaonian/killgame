@@ -13,9 +13,7 @@ var char = document.getElementById("char");
 var push = document.getElementById("push");
 function next() {
 	if (paperNum>=peopleNum*2) {//结束页
-		//push.innerHTML="查看法官台本";
-		alert("功能暂未开放")
-		//location.href = "task4.html";
+		location.href = "task4-1.html";
 	} else {
 		if (paperNum%2==1 && paperNum<peopleNum*2-1) {
 			hidden.style.display="block";

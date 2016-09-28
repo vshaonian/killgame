@@ -1,0 +1,85 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	background-color: #f0f0f0;
+}
+.head{
+	height: 8rem;
+	border-bottom: 2px solid #74d4eb;
+	line-height: 8rem;
+	background-color: #29bde0;
+	font-size: 3.4rem;
+	text-align: center;
+	color: #fff;
+}
+.head a{
+	float: left;
+	margin-left: 2.5rem;
+	color: #fff;
+	text-decoration: none;
+}
+.head img{
+	float: right;
+	margin:3rem 2.5rem 0 0;
+}
+.day{
+	margin: 3.5rem 0.9rem;
+	border: 1px solid #c9c9c9;
+	text-align: center;
+	background-color: #fff;
+}
+.dayHead{
+	height: 8.4rem;
+	border-bottom: 1px solid #c9c9c9;
+	line-height: 8.4rem;
+	font-size: 3rem;
+	color: #29bde0;
+}
+.dayHead img{
+	margin: 3.5rem 0 0 0;
+	position: absolute;
+	cursor: pointer;
+	right: 2.5rem;
+}
+.dayIcon{
+	position: absolute;
+	top: 20rem;
+	width: 4.9rem;
+	border-right: 2px solid #c9c9c9;
+}
+.dayIcon img{
+	display: block;
+	height: 3rem;
+	width: 3rem;
+	position: relative;
+	right: -2.2rem;
+	padding: 1rem;
+	border: 2px solid #c9c9c9;
+	border-radius: 50%;
+}
+.dayContent{
+	margin-left: 13rem;
+}
+.dayContent a{
+	display: block;
+	height: 7rem;
+	margin-top: 2rem;
+	margin-right: 2rem;
+	font-size: 3rem;
+	line-height: 7rem;
+	color: #fff;
+	background-color: #24a7c6;
+}
+.dayContent a:before{
+	content: '';
+	width: 0;
+	height: 0;
+	position: relative;
+	right: 250px;
+	border-top: 11px solid #fff;
+	border-bottom: 11px solid #fff;
+	border-left: 16px solid #fff;
+	border-right: 16px solid #24a7c6;
+}

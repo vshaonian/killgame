@@ -5,6 +5,6 @@ console.log("读取：" + newPlayer);
 console.log('数组长度：' + newPlayer.length);
 for (var i = 0; i < newPlayer.length; i++) {
 	li = document.createElement("li");
-	li.innerHTMl=;
+	li.innerHTML = '<p>' + newPlayer[i] + '</p><span>' + (i+1) + '号</span>';
 	wrap.appendChild(li);
 }

@@ -2,9 +2,6 @@
 	margin:0;
 	padding: 0;
 }
-html{
-	font-size: 62.5%;
-}
 body{
 	
 	background-color: #29bde0;
@@ -28,7 +25,7 @@ body{
 	margin:3rem 2.5rem 0 0;
 }
 #wrap{
-	width: 64rem;
+	width: 57rem;
 	height: 81rem;
 	margin: 0 auto;
 	font-size: 0px;
@@ -37,22 +34,14 @@ body{
 #wrap li{
 	width: 12.6rem;
 	height: 12.6rem;
-	margin: 5rem;
+	margin: 5rem 2.7rem;
+	border:5px solid #fff;
 	text-align: center;
 	display: inline-block;
 	font-size: 0px;
 	background-color: #fff;
 	background-image: url(task4/icon.png);
 	background-size: 100%;
-}
-.hole{
-	margin: 0 auto;
-	width: 12.6rem;
-	height: 12.6rem;
-	/*font-size: 2.3rem;
-	background-color: #fff;
-	background-image: url(task4/icon.png);
-	background-size: 100%;*/
 }
 #wrap li :hover{
 	background-image: none;
@@ -61,7 +50,12 @@ body{
 #wrap p{
 	width: 100%;
 	height: 9.8rem;
+	opacity: 0;
 	font-size: 2.3rem;
+	line-height: 9.8rem;
+}
+#wrap p:hover{
+	opacity: 1;
 }
 #wrap span{
 	display: block;

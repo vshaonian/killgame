@@ -22,19 +22,16 @@ if(once !== "开始游戏") {
 //杀人投票
 function other() {
 	function kill() {
+		var temp = liNum[0];
 		for(var i = 0; i < liNum.length; i++) {
             liNum[i].onclick = function (event) {
                 if (event.target.firstChild.nodeValue === "杀手") {
                     alert("杀手不能杀死杀手！")
                 } else {
-                    console.log(event.target.parentNode);
-                    var dead = this;
-                    //this.style.borderColor = "red";
-					console.log(dead);
-                    console.log(event.target.firstChild);
-                    return dead;
+                	temp.style.borderColor = "#fff";
+                	temp = this;
+                	temp.style.borderColor = "red";
                 }
-                dead.style.borderColor = "red";
             }
         }
         //deadArr[0].style.borderColor = "red";

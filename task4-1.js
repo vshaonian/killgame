@@ -2,7 +2,7 @@ var wrap = document.getElementById("wrap");
 var playerStr = localStorage.ids;
 var newPlayer = JSON.parse(playerStr);
 var liNum = document.getElementsByTagName("li");
-var deadArr = [];
+//var deadArr = JSON.parse(localStorage.deadPlayerArr);
 console.log("读取"+newPlayer);
 console.log('数组长度：' + newPlayer.length);
 for (var i = 0; i < newPlayer.length; i++) {//根据玩家人数输出玩家方框，并命名
@@ -11,17 +11,27 @@ for (var i = 0; i < newPlayer.length; i++) {//根据玩家人数输出玩家方�
 	wrap.appendChild(li);
 	liNum[i].setAttribute("id","player"+i);//给li设置id,方便后面使用
 
-}console.log(liNum);
+}
 
 //判断是否是第一次进入该页面
 var once = document.getElementsByTagName("button")[0].firstChild.nodeValue;
 if(once !== "开始游戏") {
 	other();
+} else {
+	deadArr = [];
+	localStorage.deadPlayerArr = JSON.stringify(deadArr);
 }
 
 
 //杀人投票
 function other() {
+
+	//从本地取出死亡玩家数组
+    var deadArr = JSON.parse(localStorage.deadPlayerArr);
+
+    //确定已死玩家
+    console.log("已死玩家"+deadArr);
+
 	//杀人
 	function kill() {
 		var temp = liNum[0];
@@ -40,12 +50,11 @@ function other() {
             }
         }
         var btn = document.getElementsByTagName("button")[0];
-
         //点击按钮将死亡玩家存入数组
         btn.addEventListener("click",function () {
-        	deadArr.push(localStorage.deadPlayerNum);
-        	localStorage.deadPlayerArr = deadArr;
-			console.log(deadArr);
+        	deadArr.push(JSON.parse(localStorage.deadPlayerNum));
+        	localStorage.deadPlayerArr = JSON.stringify(deadArr);
+        	console.log(deadArr);
         })
     }
     kill();

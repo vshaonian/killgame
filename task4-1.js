@@ -13,6 +13,7 @@ for (var i = 0; i < newPlayer.length; i++) {//根据玩家人数输出玩家方�
 
 }
 
+
 //判断是否是第一次进入该页面
 var once = document.getElementsByTagName("button")[0].firstChild.nodeValue;
 if(once !== "开始游戏") {
@@ -32,6 +33,15 @@ function other() {
     //确定已死玩家
     console.log("已死玩家"+deadArr);
 
+    //已死玩家不可选
+	if (deadArr.length !== 0) {
+        for (var j = 0; j < deadArr.length; j++) {
+        	var domId = "player" + (deadArr[j] - 1);
+            var deadDom = document.getElementById(domId);
+            deadDom.style.opacity = "0.5";
+            deadDom.style.borderColor = "red";
+        }
+    }
 	//杀人
 	function kill() {
 		var temp = liNum[0];

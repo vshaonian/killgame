@@ -2,6 +2,7 @@ var wrap = document.getElementById("wrap");
 var playerStr = localStorage.ids;
 var newPlayer = JSON.parse(playerStr);
 var liNum = document.getElementsByTagName("li");
+var deadArr = [];
 console.log("读取"+newPlayer);
 console.log('数组长度：' + newPlayer.length);
 for (var i = 0; i < newPlayer.length; i++) {//根据玩家人数输出玩家方框，并命名
@@ -21,6 +22,7 @@ if(once !== "开始游戏") {
 
 //杀人投票
 function other() {
+	//杀人
 	function kill() {
 		var temp = liNum[0];
 		for(var i = 0; i < liNum.length; i++) {
@@ -31,32 +33,25 @@ function other() {
                 	temp.style.borderColor = "#fff";
                 	temp = this;
                 	temp.style.borderColor = "red";
+                	var deadNum = event.target.parentNode.lastChild.firstChild.nodeValue;
+                	localStorage.deadPlayerNum = deadNum.substring(0,1);
+                	console.log(deadNum+"玩家死了");
                 }
             }
         }
-        //deadArr[0].style.borderColor = "red";
+        var btn = document.getElementsByTagName("button")[0];
+
+        //点击按钮将死亡玩家存入数组
+        btn.addEventListener("click",function () {
+        	deadArr.push(localStorage.deadPlayerNum);
+        	localStorage.deadPlayerArr = deadArr;
+			console.log(deadArr);
+        })
     }
     kill();
+
+    //投票
+    function vote() {
+    	console.log("开始投票")
+    }
 }
-
-// window.onload = function () {
-// 	first++;
-// 	localStorage.once = first;
-// }
-
-// function getId() {
-// 	var tempDiv=document.getElementById('wrap');
-//     var teBut=tempDiv.getElementsByTagName('li');
-//      for(var i=0;i<teBut.length;i++){
-//          teBut[i].onclick=function(){
-//          	teBut[killed].style.borderColor = "#fff";
-// 	        killed = this.id;
-// 	        console.log(liNum.killed);
-// 	        console.log('存储'+killed);
-// 	        console.log(this);
-// 	        this.style.borderColor = "red";
-// 	    }
-//     }
-// }
-// console.log(document.getElementById('killed'));
-// window.onload = getId;

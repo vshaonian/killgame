@@ -33,6 +33,11 @@ body{
 	width: 25.6rem;
 	margin-top: 6.3rem;
 }
+#rel{
+	margin-top: 10rem;
+	font-size: 4rem;
+	color: #fff;
+}
 .txt{
 	margin-top: 3.4rem;
 	text-align: center;

@@ -35,7 +35,6 @@ function other() {
 
     //确定已死玩家
     console.log("已死玩家"+deadArr);
-
     //已死玩家变半透明
 	if (deadArr.length !== 0) {
         for (var j = 0; j < deadArr.length; j++) {
@@ -46,28 +45,19 @@ function other() {
         }
     }
 
-
+    
 	//杀人
 	function kill() {
 		var temp = document.getElementById("fix");
 		for(var i = 0; i < liNum.length; i++) {
             liNum[i].onclick = function (event) {
-                console.log(deadArr);
-                console.log(typeof(deadArr[0]));
-                var deadNum = event.target.parentNode.lastChild.firstChild.nodeValue;
-                // alert(deadNum.substring(0,1));
-                // alert(deadNum.substring(0,1) in deadArr);
-                //alert(event.target.parentNode.lastChild.firstChild.nodeValue.substring(0,1));
-                // if (deadArr.indexOf(event.target.parentNode.lastChild.firstChild.nodeValue) >= 0) {
-                //     alert("该玩家已死")
-                // } else
 
-                // for(var k = 0; k < deadArr.length; k++) {
-                //     if (deadArr[k] === deadNum.substring(0,1)) {
-                //         alert("此玩家已死")
-                //     }
-                // }
-                    if (event.target.firstChild.nodeValue === "杀手") {
+                var deadNum = event.target.parentNode.lastChild.firstChild.nodeValue;
+
+                console.log(typeof(deadNum.substring(0,1)));
+                if (deadArr.indexOf(parseInt(deadNum.substring(0,1))) >= 0) {
+                    alert("该玩家已死")
+                } else if (event.target.firstChild.nodeValue === "杀手") {
                     alert("杀手不能杀死杀手！")
                 } else {
                 	temp.style.borderColor = "#fff";

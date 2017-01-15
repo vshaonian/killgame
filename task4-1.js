@@ -23,7 +23,6 @@ if(once !== "开始游戏") {
 	localStorage.deadPlayerArr = JSON.stringify(deadArr);
 }
 
-
 //杀人投票
 function other() {
 
@@ -69,16 +68,24 @@ function other() {
                 }
             }
         }
-        var btn = document.getElementsByTagName("button")[0];
-        //点击按钮将死亡玩家存入数组
-        btn.addEventListener("click",function () {
-        	deadArr.push(JSON.parse(localStorage.deadPlayerNum));
-        	localStorage.deadPlayerArr = JSON.stringify(deadArr);
-        	console.log(deadArr);
-        })
+        // var btn = document.getElementsByTagName("button")[0];
+        // //点击按钮将死亡玩家存入数组
+        // btn.addEventListener("click",function () {
+        // 	deadArr.push(JSON.parse(localStorage.deadPlayerNum));
+        // 	localStorage.deadPlayerArr = JSON.stringify(deadArr);
+        // 	console.log(deadArr);
+        // })
     }
     kill();
 
+    var btn = document.getElementsByTagName("button")[0];
+    //点击按钮将死亡玩家存入数组
+    btn.addEventListener("click",function () {
+        deadArr.push(JSON.parse(localStorage.deadPlayerNum));
+        localStorage.deadPlayerArr = JSON.stringify(deadArr);
+        console.log(deadArr);
+        btn.parentNode.setAttribute("href","task4-5.html");
+    });
     //投票
     function vote() {
     	console.log("开始投票")

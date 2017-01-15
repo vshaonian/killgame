@@ -3,5 +3,18 @@
  */
 var deadPlayer = JSON.parse(localStorage.deadPlayerArr);
 var rel = document.getElementById("rel");
-rel.innerHTML = deadPlayer[deadPlayer.length-1]+"号玩家被杀死了";
+var btn = document.getElementsByTagName("button")[0];
+var text = btn.firstChild.nodeValue;
+console.log(text);
+console.log(deadPlayer.length);
+if((deadPlayer.length) % 2 !== 0) {
+    rel.innerHTML = deadPlayer[deadPlayer.length-1]+"号玩家被杀死了";
+    btn.innerHTML = "去投票";
+    btn.parentNode.setAttribute("href", "task4-5.html")
+} else {
+    rel.innerHTML = deadPlayer[deadPlayer.length-1]+"号玩家被投死了";
+    btn.innerHTML = "第" + ((deadPlayer.length/2)+1) + "天";
+    btn.parentNode.setAttribute("href", "task4-2.html")
+}
+
 console.log(deadPlayer);

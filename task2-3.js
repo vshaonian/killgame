@@ -52,6 +52,7 @@ function printf() {
 	var playerStr = JSON.stringify(newPlayer);
 	localStorage.killers = killerNum;
 	localStorage.peoples = peopleNum;
+	localStorage.waters = (peopleNum - killerNum);
 	localStorage.ids = playerStr;
 	console.log("数组变成字符串存储" + playerStr);
 }

@@ -15,3 +15,8 @@ for(var i = 0; i < days; i++) {
 }
 console.log(days);
 
+var btn = document.getElementById("next");
+btn.addEventListener("click",function () {
+    location = "task4-3.html";
+})
+

@@ -53,10 +53,9 @@ function other() {
 		for(var i = 0; i < liNum.length; i++) {
             liNum[i].onclick = function (event) {
 
-                var deadNum = event.target.parentNode.lastChild.firstChild.nodeValue;
+                var deadNum = parseInt(event.target.parentNode.lastChild.firstChild.nodeValue);
 
-                console.log(typeof(deadNum.substring(0,1)));
-                if (deadArr.indexOf(parseInt(deadNum.substring(0,1))) >= 0) {
+                if (deadArr.indexOf(deadNum) >= 0) {
                     alert("该玩家已死")
                 } else if (event.target.firstChild.nodeValue === "杀手") {
                     alert("杀手不能杀死杀手！")
@@ -64,8 +63,8 @@ function other() {
                 	temp.style.borderColor = "#fff";
                 	temp = this;
                 	temp.style.borderColor = "red";
-                	//var deadNum = event.target.parentNode.lastChild.firstChild.nodeValue;
-                	localStorage.deadPlayerNum = deadNum.substring(0,1);
+                	localStorage.deadPlayerNum = deadNum;
+                	console.log(deadNum);
                 	console.log(deadNum+"玩家死了");
                 }
             }
@@ -78,17 +77,15 @@ function other() {
         for(var i = 0; i < liNum.length; i++) {
             liNum[i].onclick = function (event) {
 
-                var deadNum = event.target.parentNode.lastChild.firstChild.nodeValue;
+                var deadNum = parseInt(event.target.parentNode.lastChild.firstChild.nodeValue);
 
-                console.log(typeof(deadNum.substring(0,1)));
-                if (deadArr.indexOf(parseInt(deadNum.substring(0,1))) >= 0) {
+                if (deadArr.indexOf(deadNum) >= 0) {
                     alert("该玩家已死")
                 } else {
                     temp.style.borderColor = "#fff";
                     temp = this;
                     temp.style.borderColor = "red";
-                    //var deadNum = event.target.parentNode.lastChild.firstChild.nodeValue;
-                    localStorage.deadPlayerNum = deadNum.substring(0,1);
+                    localStorage.deadPlayerNum = deadNum;
                     console.log(deadNum+"玩家死了");
                 }
             }

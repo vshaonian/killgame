@@ -15,10 +15,3 @@ for(var i = 0; i < days; i++) {
 }
 console.log(days);
 
-//定时器
-var btn = document.getElementById("next");
-btn.addEventListener("click", function (days) {
-    console.log("233");
-    console.log(parseInt(days*2));
-    
-});

@@ -112,6 +112,6 @@ function reset() {//根据滑块位置动态改变输入框人数
 	document.getElementById("people").value=moveNum;
 } 
 function dont() {
-	alert("即将上线，敬请期待，么么哒")
+	alert("即将上线，敬请期待")
 }
 window.onload=setting;//启动加载

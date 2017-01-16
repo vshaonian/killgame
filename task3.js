@@ -36,20 +36,6 @@ function next() {
 				push.innerHTML="查看法官台本";
 			}
 		}
-		// if (paperNum%2==0) {//翻牌页
-		// 	look.style.display="block";
-		// 	hidden.style.display="none";
-		// 	circle.innerHTML=i+1;
-		// 	push.innerHTML="查看"+(i+1)+"号身份";
-		// } 
-		// else {//角色页
-		// 	hidden.style.display="block";
-		// 	look.style.display="none";
-		// 	char.innerHTML="角色："+newPlayer[i];
-		// 	circle.innerHTML=i+1;
-		// 	push.innerHTML="隐藏并传递给"+(i+2)+"号";
-		// 	i++;
-		// }
 	}
 	console.log(i);
 	paperNum++;

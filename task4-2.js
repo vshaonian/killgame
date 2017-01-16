@@ -15,8 +15,13 @@ for(var i = 0; i < days; i++) {
 }
 console.log(days);
 
+
+//按钮事件
 var btn = document.getElementById("next");
 btn.addEventListener("click",function () {
     location = "task4-3.html";
+    var time = new Date();
+    localStorage.time = time;
 })
+
 

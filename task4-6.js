@@ -12,6 +12,39 @@ var killers = localStorage.killers;
 // }
 var rel_inf = document.getElementsByClassName("rel-inf")[0];
 var rel_txt = document.getElementsByClassName("rel-txt")[0];
+
+//获取储存在本地的时间
+var timeArr = [];
+for(var i = 0; i < localStorage.length; i++) {
+    if(localStorage.key(i).substring(0,4) === "time") {
+        var getValue = localStorage.getItem(localStorage.key(i));
+        timeArr.push(Math.floor(parseInt(getValue) / 1000));
+    }
+}
+timeArr.shift();
+
+//修复杀手获胜时时间bug
+if(deadPlayers.length % 2 === 1) {
+    var lastTime = new Date() - new Date(localStorage.time);
+    timeArr.push(Math.floor(lastTime / 1000));
+}
+console.log(timeArr);
+
+//把秒转化为标准时间
+function time(s) {
+    var hours = Math.floor(s / 3600);
+    var minutes = Math.floor(s % 3600 / 60);
+    var seconds = Math.floor(s % 3600 % 60);
+
+    return (hours > 0 ? hours + "小时" + (minutes < 10 ? "0" : "") : "") + minutes + "分钟" + (seconds < 10 ? "0" : "") + seconds + "秒";
+}
+
+//总时间
+var totalTime = timeArr.reduce(function (a,b) {
+    return a + b;
+});
+var total = document.getElementById("total");
+total.innerHTML = "本次游戏共计用时" + time(totalTime);
 //输出结果
 
 console.log(parseInt(localStorage.aliveKillers));
@@ -38,14 +71,16 @@ k_txt.innerHTML = "手 " + killers + " 人";
 
 //输出过程
 
-//var days = Math.floor(deadPlayers.length/2)+1;
 var main = document.getElementsByClassName("mainbody")[0];
 
 for(var j = 0; j < deadPlayers.length; j++) {
+    var day = (j + 2) / 2;
     var div = document.createElement("div");
     div.innerHTML = '<p>' +
-        '<span class="day">第' + (j+2)/2 + '天</span>' +
-        '<span class="time">0小时07分</span>' +
+        '<span class="day">第' + day + '天</span>' +
+        '<span class="time">' +
+        time(timeArr[day-1]) +
+        '</span>' +
         '</p>' +
         '<p class="content-txt">' +
         '晚上：' +
@@ -66,8 +101,6 @@ for(var j = 0; j < deadPlayers.length; j++) {
     main.appendChild(div);
     j++;
 }
-
-//
 
 var content_txt = document.getElementsByClassName("content-txt")
 var last_content = content_txt[content_txt.length-1];

@@ -19,37 +19,8 @@ if((deadPlayer.length) % 2 !== 0) {
     //计时器
     btn.addEventListener("click",function () {
         var time = new Date() - new Date(localStorage.time);
-        switch (deadPlayer.length / 2) {
-            case 1:
-                localStorage.time1 = time;
-                break;
-            case 2:
-                localStorage.time2 = time;
-                break;
-            case 3:
-                localStorage.time3 = time;
-                break;
-            case 4:
-                localStorage.time4 = time;
-                break;
-            case 5:
-                localStorage.time5 = time;
-                break;
-            case 6:
-                localStorage.time6 = time;
-                break;
-            case 7:
-                localStorage.time7 = time;
-                break;
-            case 8:
-                localStorage.time8 = time;
-                break;
-            case 9:
-                localStorage.time9 = time;
-                break;
-            default:
-                break;
-        }
+        var name = "time" + (deadPlayer.length / 2);
+        localStorage.setItem(name,time);
     })
 }
 

@@ -34,7 +34,9 @@ function time(s) {
     var minutes = Math.floor(s % 3600 / 60);
     var seconds = Math.floor(s % 3600 % 60);
 
-    return (hours > 0 ? hours + "小时" + (minutes < 10 ? "0" : "") : "") + minutes + "分钟" + (seconds < 10 ? "0" : "") + seconds + "秒";
+    //return (hours > 0 ? hours + "小时" + (minutes < 10 ? "0" : "") : "") + minutes + "分钟" + (seconds < 10 ? "0" : "") + seconds + "秒";
+    return (hours > 0 ? hours + "小时" + (minutes < 10 ? "0" : "") : "") + (minutes > 0 ? minutes + "分钟" +
+            (seconds < 10 && seconds > 0 ? "0" : ""): "")  + (seconds > 0 ? seconds + "秒" : "");
 }
 
 //总时间

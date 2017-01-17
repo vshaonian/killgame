@@ -23,11 +23,9 @@ for(var i = 0; i < localStorage.length; i++) {
 }
 timeArr.shift();
 
-//修复杀手获胜时时间bug
-if(deadPlayers.length % 2 === 1) {
-    var lastTime = new Date() - new Date(localStorage.time);
-    timeArr.push(Math.floor(lastTime / 1000));
-}
+//修复计时bug
+var lastTime = parseInt(localStorage.lastTime);
+timeArr.push(Math.floor(lastTime / 1000));
 console.log(timeArr);
 
 //把秒转化为标准时间

@@ -100,12 +100,6 @@ function other() {
     }
 
     var btn = document.getElementsByTagName("button")[0];
-    // if(deadArr.length === 0) {
-    //     var aliveKillers = parseInt(localStorage.killers);
-    //     localStorage.aliveKillers = aliveKillers;
-    //     var aliveWaters = parseInt(localStorage.waters);
-    //     localStorage.aliveWaters = aliveWaters;
-    // }
     btn.addEventListener("click",function () {
         if(JSON.parse(localStorage.deadPlayerNum) === 0) {
             alert("请选择一名玩家");
@@ -133,6 +127,9 @@ function other() {
                     break;
             }
             if(aliveWaters === 0 || aliveKillers === 0) {
+                //修复计时BUG
+                var lastTime = new Date() - new Date(localStorage.time);
+                localStorage.lastTime = lastTime;
                 btn.parentNode.setAttribute("href", "task4-6.html");
             } else {
                 btn.parentNode.setAttribute("href", "task4-4.html")

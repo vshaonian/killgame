@@ -115,3 +115,4 @@ function dont() {
 	alert("即将上线，敬请期待")
 }
 window.onload=setting;//启动加载
+localStorage.clear();

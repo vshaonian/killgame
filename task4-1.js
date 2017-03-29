@@ -2,8 +2,6 @@ var wrap = document.getElementById("wrap");
 var playerStr = localStorage.ids;
 var newPlayer = JSON.parse(playerStr);
 var liNum = document.getElementsByTagName("li");
-console.log("读取"+newPlayer);
-console.log('数组长度：' + newPlayer.length);
 for (var i = 0; i < newPlayer.length; i++) {//根据玩家人数输出玩家方框，并命名
 	li = document.createElement("li");
 	li.innerHTML = '<p>' + newPlayer[i] + '</p><span>' + (i+1) + '号</span>';//输出内容
@@ -29,7 +27,6 @@ function other() {
     var deadArr = JSON.parse(localStorage.deadPlayerArr);
 
     //确定已死玩家
-    console.log("已死玩家"+deadArr);
     //已死玩家变半透明
 	if (deadArr.length !== 0) {
         for (var j = 0; j < deadArr.length; j++) {
@@ -64,8 +61,6 @@ function other() {
                 	temp = this;
                 	temp.style.borderColor = "red";
                 	localStorage.deadPlayerNum = deadNum;
-                	console.log(deadNum);
-                	console.log(deadNum+"玩家死了");
                 }
             }
         }
@@ -86,7 +81,6 @@ function other() {
                     temp = this;
                     temp.style.borderColor = "red";
                     localStorage.deadPlayerNum = deadNum;
-                    console.log(deadNum+"玩家死了");
                 }
             }
         }
@@ -107,10 +101,7 @@ function other() {
             //点击按钮将死亡玩家存入数组
             deadArr.push(JSON.parse(localStorage.deadPlayerNum));
             localStorage.deadPlayerArr = JSON.stringify(deadArr);
-            console.log(deadArr);
             //
-            console.log(parseInt(localStorage.deadPlayerNum));
-            console.log(newPlayer[parseInt(localStorage.deadPlayerNum) - 1]);
 
             //输赢判断
 

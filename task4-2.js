@@ -13,7 +13,6 @@ for(var i = 0; i < days; i++) {
         "<img class='change' src='task4/change.png'>";
     day.insertBefore(div,day_main);
 }
-console.log(days);
 
 
 //按钮事件

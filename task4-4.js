@@ -24,4 +24,3 @@ if((deadPlayer.length) % 2 !== 0) {
     })
 }
 
-console.log(deadPlayer);

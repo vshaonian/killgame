@@ -2,9 +2,7 @@
  * Created by 少年 on 2017/1/15.
  */
 var deadPlayers = JSON.parse(localStorage.deadPlayerArr);
-console.log(deadPlayers);
 var cha = JSON.parse(localStorage.ids);
-console.log(cha);
 // for(var i = 0; i < deadPlayers.length; i++) {
 //
 // }
@@ -20,7 +18,6 @@ p_txt.innerHTML = "民 " + peoples + " 人";
 var killers = localStorage.killers;
 var k_txt = document.getElementById("killers");
 k_txt.innerHTML = "手 " + killers + " 人";
-console.log(peoples);
 
 //输出过程
 

@@ -1,7 +1,6 @@
 var peopleNum;
 function setting() {
 	peopleNum=parseInt(document.getElementById("people").value);
-	console.log("玩家人数"+peopleNum+"人")
 	if (isNaN(peopleNum) || peopleNum < 6 || peopleNum > 18)//判断输入值
         alert("请输入6-18之间的数字");
     else {
@@ -19,7 +18,6 @@ function allPlayer() {
 	else {
 		killerNum=Math.floor(peopleNum/4);//获取杀手人数
 	}
-	console.log("杀手人数"+killerNum)
 }
 var player=document.getElementById("player");
 function printf() {
@@ -47,14 +45,12 @@ function printf() {
 		}
 		//数组进行洗牌，并输出一个新数组
 	var newPlayer = shuffle(playerA);
-	console.log(newPlayer);
 	//数组转化成字符串并存储与本地
 	var playerStr = JSON.stringify(newPlayer);
 	localStorage.killers = killerNum;
 	localStorage.peoples = peopleNum;
 	localStorage.waters = (peopleNum - killerNum);
 	localStorage.ids = playerStr;
-	console.log("数组变成字符串存储" + playerStr);
 }
 function clear() {//清空输出内容
 	clears=document.getElementById("player");
@@ -108,7 +104,6 @@ function move() {//改变滑块位置
 }
 function reset() {//根据滑块位置动态改变输入框人数
 	var moveNum=document.getElementById("moveback").value;
-	console.log(moveNum);
 	document.getElementById("people").value=moveNum;
 } 
 function dont() {

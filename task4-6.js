@@ -2,9 +2,7 @@
  * Created by 少年 on 2017/1/15.
  */
 var deadPlayers = JSON.parse(localStorage.deadPlayerArr);
-console.log(deadPlayers);
 var cha = JSON.parse(localStorage.ids);
-console.log(cha);
 var waters = localStorage.waters;
 var killers = localStorage.killers;
 // for(var i = 0; i < deadPlayers.length; i++) {
@@ -26,7 +24,6 @@ timeArr.shift();
 //修复计时bug
 var lastTime = parseInt(localStorage.lastTime);
 timeArr.push(Math.floor(lastTime / 1000));
-console.log(timeArr);
 
 //把秒转化为标准时间
 function time(s) {
@@ -47,7 +44,6 @@ var total = document.getElementById("total");
 total.innerHTML = "本次游戏共计用时" + time(totalTime);
 //输出结果
 
-console.log(parseInt(localStorage.aliveKillers));
 if(parseInt(localStorage.aliveKillers) === 0) {
     rel_inf.innerHTML = "水民胜利";
     rel_txt.innerHTML = "本轮游戏共抓出杀手" +
